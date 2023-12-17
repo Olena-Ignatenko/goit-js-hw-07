@@ -31,9 +31,10 @@ const items = images.map((image) => {
   const imageElement = document.createElement("img");
   imageElement.src = image.url;
   imageElement.alt = image.alt;
-  listItem.appendChild(imageElement);
+  listItem.append(imageElement);
 
     return listItem;
 })
 
 list.append(...items);
+
