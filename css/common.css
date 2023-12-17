@@ -19,7 +19,7 @@ body {
   gap: 10px;
 }
 
-img {
+.gallery img {
   width: 200px; 
   border: 1px solid #ddd; 
   border-radius: 4px; 
