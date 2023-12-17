@@ -9,7 +9,6 @@ const createBtn = document.querySelector("[data-create]");
 const destroyBtn = document.querySelector("[data-destroy]");
 const boxesContainer = document.querySelector("#boxes");
 
-
 const createBoxes = (amount) => {
   boxesContainer.innerHTML = "";
 
