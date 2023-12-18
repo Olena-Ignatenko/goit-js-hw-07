@@ -12,18 +12,20 @@ const boxesContainer = document.querySelector("#boxes");
 const createBoxes = (amount) => {
   boxesContainer.innerHTML = "";
 
-  let size = 30;
+  const boxes = [];
+  let boxSizeInPx = 30;
 
   for (let i = 0; i < amount; i++) {
     const box = document.createElement("div");
-    box.style.width = `${size}px`;
-    box.style.height = `${size}px`;
+    box.style.width = `${boxSizeInPx}px`;
+    box.style.height = `${boxSizeInPx}px`;
     box.style.backgroundColor = getRandomHexColor();
 
-    boxesContainer.append(box);
+    boxes.push(box);
 
-    size += 10;
+    boxSizeInPx += 10;
   }
+  boxesContainer.append(...boxes);
 };
 
 const destroyBoxes = () => {
@@ -31,7 +33,7 @@ const destroyBoxes = () => {
 };
 
 createBtn.addEventListener("click", () => {
-  const amount = input.value;
+  const amount = Number(input.value);
 
   if (amount >= 1 && amount <= 100) {
     createBoxes(amount);
